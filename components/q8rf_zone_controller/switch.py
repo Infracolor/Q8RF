@@ -18,7 +18,7 @@ q8rf_ns = cg.esphome_ns.namespace("q8rf")
 q8rf_SWITCH = q8rf_ns.class_("Q8RFSwitch", switch.Switch, cg.Component)
 
 CONFIG_SCHEMA = (
-    switch.SWITCH_SCHEMA.extend({
+    switch._SWITCH_SCHEMA.extend({
         cv.GenerateID(): cv.declare_id(q8rf_SWITCH),
         cv.GenerateID(CONF_Q8RFController_ID): cv.use_id(Q8RFController),
     }
